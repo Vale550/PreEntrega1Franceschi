@@ -11,28 +11,6 @@ const ItemListcontainer = ({categoria}) =>{
     const [cargando, setCargando] = useState(true)
     const [productos, setproduct] = useState ([])
 
-    // const promesa = new Promise((resolve, reject) => {
-    //         const productos = [
-    //             //Productos de firebase
-    //             {Nombre: "Iphone 12", img: imagenes.iphone_12 , precio: 2000, id:1},
-    //             {Nombre: "Galaxy A33", img: imagenes.galaxy_a33 , precio: 3000, id:2},
-    //             {Nombre: "Galaxy S", img: imagenes.galaxy_s , precio: 4000, id:3},
-    //             {Nombre: "Iphone 13", img: imagenes.iphone_13 , precio: 5000, id:4},
-    //         ]
-
-    //         setTimeout(() => {
-    //             productos.length > 0 ? resolve (productos) :  reject("no hay productos")
-    //         }, 1000);
-    // });
-
-    // useEffect(() => {
-    //     promesa
-    //     .then(res => {
-    //         console.log(res)
-    //         setproduct(res)
-    //     })
-    //     .catch(error => console.error(error.message))
-    // }, [])
 
 if (categoria=="nuevos"){
   useEffect(() => {
@@ -75,26 +53,6 @@ if (categoria=="Mas_vendidos"){
   }, [])
 }
 
-
-    // useEffect(() => {
-
-    //     const productRef = doc(db, "products", "abCWduzrtetJdFGgoRJD")
-
-    //     getDoc(productRef)
-    //     .then((snapshot) => {
-    //         if(snapshot.exists()){
-    //             console.log({ id: snapshot.id, ...snapshot.data()})
-    //         }
-    //     })
-
-    //     const productsRef = collection(db, "products")
-    //     getDocs(productsRef)
-    //     .then(snapshot => {
-    //         console.log(snapshot.docs.map(doc => ({id: doc.id, ...doc.data()})))
-    //     })
-    //     .catch(e => console.error(e))
-
-    // }, [])
 
         return(
         <>
